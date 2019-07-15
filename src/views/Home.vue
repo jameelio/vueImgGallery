@@ -19,9 +19,6 @@
       <li v-for="(imageSrc,index) in userImageList" v-bind:key="index" target="_blank" :href=imageSrc class="image">
           <img :src=imageSrc alt="Forest" style="width:150px;height:150px">
           <div class="overlay">
-            <div class="d-flex align-items-center justify-content-center" style="padding-bottom:25px;padding-top:12px;">
-              <i class="fa fa fa-trash fa-2x"></i>
-            </div>
              <div class="d-flex align-items-center justify-content-center">
               <i class="fa fa fa-link fa-2x" :href=imageSrc @click="openLink(imageSrc)"></i>
             </div>
