@@ -98,6 +98,13 @@ export default {
 
 <style>
 
+@media only screen and (max-width: 768px) {
+img{
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+
 #imgblock{
     display: flex;
     float: none;
