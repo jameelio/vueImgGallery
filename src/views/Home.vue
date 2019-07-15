@@ -15,16 +15,18 @@
     @onUpload="startImageResize">
     </image-uploader>
     </div>
-    <ul class="d-flex justify-content-center">
-      <li v-for="(imageSrc,index) in userImageList" v-bind:key="index" target="_blank" :href=imageSrc class="image">
+    <div class="d-flex justify-content-center">
+      <ul class="d-flex justify-content-center" id="imgblock">
+        <li v-for="(imageSrc,index) in userImageList" v-bind:key="index" target="_blank" :href=imageSrc class="image">
           <img :src=imageSrc alt="Forest" style="width:150px;height:150px">
           <div class="overlay">
              <div class="d-flex align-items-center justify-content-center">
               <i class="fa fa fa-link fa-2x" :href=imageSrc @click="openLink(imageSrc)"></i>
             </div>
           </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -95,6 +97,19 @@ export default {
 </script>
 
 <style>
+
+#imgblock{
+    display: flex;
+    float: none;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+}
+
 ul {
   list-style-type: none;
   list-style-position: inside;
