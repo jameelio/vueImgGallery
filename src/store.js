@@ -45,7 +45,7 @@ export default new Vuex.Store({
         console.log("login data",user)
         commit('auth_request')
         axios({
-          url: `${APIURI}/signIn`,
+          url: `${APIURI}/signIn/`,
           method: "POST",
           data: user
         })
