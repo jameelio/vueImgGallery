@@ -104,7 +104,7 @@ export default {
     margin: 0 auto;
     flex-wrap: wrap;
     padding: 20px;
-    
+    height: 80vh;
     width: 100%;
     display: flex;
     overflow-y: scroll;
