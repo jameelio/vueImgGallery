@@ -72,7 +72,7 @@ export default {
       
         }
     },
-    setImage(output){
+   async setImage(output){
       this.hasImage = true;
       this.image = output;
       const user = this.$store.getters.user;
@@ -82,7 +82,12 @@ export default {
       formData.append("file", output);
       formData.set("user",user);
       
-      this.$store.dispatch("upload",formData);
+      const newSubmitImg = await this.$store.dispatch("upload",formData);
+      if(newSubmitImg){
+        this.userImageList.push(newSubmitImg);
+        this.image = null;
+         this.hasImage = false;
+      }
     },
     startImageResize(im){
      
