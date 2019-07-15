@@ -84,7 +84,7 @@ export default {
       
       const newSubmitImg = await this.$store.dispatch("upload",formData);
       if(newSubmitImg){
-        this.userImageList.push(newSubmitImg);
+        this.userImageList.unshift(newSubmitImg);
         this.image = null;
          this.hasImage = false;
       }
